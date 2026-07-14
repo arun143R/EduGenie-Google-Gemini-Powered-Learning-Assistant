@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - EduGenie</title>
+    <meta name="description" content="Create your EduGenie educational desk to analyze, summarize, explain, and roadmap your study topics.">
+    <meta name="author" content="EduGenie">
+    <meta property="og:title" content="Sign Up - EduGenie Workspace">
+    <meta property="og:description" content="Create a new study desk.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script>
+        // Prevent layout white-flash when dark theme is active
+        (function() {
+            const storedTheme = localStorage.getItem('theme') || 'light';
+            let activeTheme = storedTheme;
+            if (storedTheme === 'auto') {
+                activeTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', activeTheme);
+        })();
+    </script>
+    <script src="/static/js/main.js?v=1.0.1" defer></script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header style="max-width: 1200px; margin: 0 auto; padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color);">
+        <a href="/" class="nav-brand" style="font-family: var(--font-heading); font-weight: 700; font-size: 1.3rem; color: var(--text-primary);">
+            EduGenie
+        </a>
+        <a href="/login" class="btn-submit" style="padding: 0.5rem 1rem; border-radius: var(--radius-md);">Sign In</a>
+    </header>
+
+    <!-- Content Container -->
+    <div class="auth-wrapper">
+        <div class="auth-header">
+            <h2>Get Started</h2>
+            <p style="color: var(--text-secondary); font-size: 0.95rem;">Join the workspace</p>
+        </div>
+
+        <div class="auth-card">
+            <!-- Alerts Banner -->
+            <div id="authError" class="alert-error" style="display: none;"></div>
+            <div id="authSuccess" class="alert-success" style="display: none;"></div>
+
+            <!-- Registration Form -->
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regUsername" class="form-label">Username</label>
+                    <input type="text" id="regUsername" class="workspace-input" required autocomplete="username">
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail" class="form-label">Email Address</label>
+                    <input type="email" id="regEmail" class="workspace-input" required autocomplete="email">
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 2rem;">
+                    <label for="regPassword" class="form-label">Password</label>
+                    <input type="password" id="regPassword" class="workspace-input" required autocomplete="new-password">
+                </div>
+
+                <button type="submit" class="btn-submit" style="width: 100%; justify-content: center; padding: 0.85rem;">Sign Up</button>
+            </form>
+
+            <p style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: var(--text-secondary);">
+                Already have an account? <a href="/login" style="color: var(--color-primary); font-weight: 600;">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

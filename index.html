@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGenie - Learning Workspace</title>
+    <meta name="description" content="EduGenie is a minimalist educational workspace. Ask questions, clarify concepts, summarize study notes, practice quizzes, and generate study roadmaps.">
+    <meta name="keywords" content="academic workspace, tutor, concept explainer, note summarizer, study roadmap generator, student desk, study layout, test prep">
+    <meta name="author" content="EduGenie">
+    <meta property="og:title" content="EduGenie - Learning Workspace">
+    <meta property="og:description" content="An educational web application designed for students and educators. Clean, minimalist editorial interface for learning.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script>
+        // Prevent layout white-flash when dark theme is active
+        (function() {
+            const storedTheme = localStorage.getItem('theme') || 'light';
+            let activeTheme = storedTheme;
+            if (storedTheme === 'auto') {
+                activeTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', activeTheme);
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header style="max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <div class="nav-brand" style="font-family: var(--font-heading); font-weight: 700; font-size: 1.3rem; color: var(--text-primary);">
+            EduGenie
+        </div>
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
+            <a href="/login" style="font-size: 0.9rem; font-weight: 600; color: var(--text-secondary);">Sign In</a>
+            <a href="/register" class="btn-submit" style="padding: 0.55rem 1.1rem; border-radius: var(--radius-md);">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main style="max-width: 800px; margin: 0 auto; padding: 6rem 1.5rem; text-align: center;">
+        <!-- Hero Title -->
+        <h1 style="font-family: var(--font-serif); font-size: 3.5rem; font-weight: 500; line-height: 1.15; margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.02em;">
+            Your personal workspace for <span style="font-style: italic; color: var(--color-primary);">deep learning</span>.
+        </h1>
+        <p style="font-size: 1.25rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 3.5rem; font-family: var(--font-sans); max-width: 650px; margin-left: auto; margin-right: auto;">
+            An elegant educational workspace designed for students, researchers, and coders. 
+            Ask complex questions, explain concepts, summarize notes, and practice with quizzes.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 8rem; flex-wrap: wrap;">
+            <a href="/register" class="btn-submit" style="padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: var(--radius-md);">Initialize Workspace</a>
+            <a href="/login" class="workspace-input" style="display: inline-flex; align-items: center; justify-content: center; width: auto; padding: 0.85rem 2rem; font-size: 0.95rem; border-radius: var(--radius-md); font-weight: 600; text-decoration: none;">Explore Dashboard</a>
+        </div>
+
+        <!-- Features Showcase (Handcrafted Editorial Layout) -->
+        <h2 style="font-size: 1.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 4rem;">STUDY TOOLKIT</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr; gap: 3.5rem; text-align: left; max-width: 680px; margin: 0 auto;">
+            <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Ask Tutor</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Retrieve structured academic answers and coding references dynamically for complex college coursework.</p>
+            </div>
+            
+            <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Concept Explainer</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Break down complex topics into simple terms customized for beginner, intermediate, or advanced academic levels.</p>
+            </div>
+
+            <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Summarize Notes</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Upload study notes, books, and lecture text to capture clean summaries and key insights in seconds.</p>
+            </div>
+
+            <div style="padding-bottom: 2rem; border-bottom: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Practice Quizzes</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Test your mastery on any subject. Create custom interactive tests and receive guided grading feedback.</p>
+            </div>
+
+            <div style="padding-bottom: 2rem;">
+                <h3 style="font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--font-heading); color: var(--text-primary);">Learning Roadmaps</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; font-size: 0.95rem;">Plot step-by-step learning paths for your study goals, complete with milestones and references.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: 4rem 2rem; text-align: center; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.85rem; font-weight: 500;">
+        <p>&copy; 2026 EduGenie Workspace. Designed for academic clarity.</p>
+    </footer>
+
+</body>
+</html>
