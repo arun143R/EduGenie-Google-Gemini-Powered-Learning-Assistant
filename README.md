@@ -39,6 +39,24 @@ EduGenie is a clean, full-stack educational workspace built with **FastAPI**, **
 
 ---
 
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/01-ask-tutor.png" alt="Ask Tutor workspace"><br><sub><b>Ask Tutor</b> — structured, Markdown-formatted academic answers</sub></td>
+    <td width="50%"><img src="docs/screenshots/02-concept-explainer.png" alt="Concept Explainer"><br><sub><b>Concept Explainer</b> — pick a topic and a difficulty tier</sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/03-summarize-notes.png" alt="Summarize Notes"><br><sub><b>Summarize Notes</b> — paste text or upload a PDF/TXT to condense</sub></td>
+    <td width="50%"><img src="docs/screenshots/04-practice-quiz.png" alt="Practice Quizzes"><br><sub><b>Practice Quizzes</b> — auto-generated multiple-choice tests</sub></td>
+  </tr>
+  <tr>
+    <td width="50%" colspan="2"><img src="docs/screenshots/05-study-roadmap.png" alt="Study Roadmaps"><br><sub><b>Study Roadmaps</b> — step-by-step learning journeys with curated resources</sub></td>
+  </tr>
+</table>
+
+---
+
 ## 🏗️ Technical Architecture
 
 ### Technology Stack
@@ -215,4 +233,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ---
 
-<p align="center">Built with ❤️ using FastAPI and Google Gemini</p># EduGenie-Google-Gemini-Powered-Learning-Assistant
+<p align="center">Built with ❤️ using FastAPI and Google Gemini</p>
